@@ -37,3 +37,97 @@ $lista_faq = [
     ],
 ] ;
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Google FAQ</title>
+    </head>
+    <body>
+
+        <header>
+            <div class="top">
+                <div class="logo">
+                 <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="logo-img">
+                    <p>Privacy e termini</p>
+                </div>
+                
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <p>Introduzione</p>
+                        
+                    </li>
+                    <li>
+                        <p>Norme sulla privacy</p>
+                        
+                    </li>
+                    <li>
+                        <p>Termini di servizio</p>
+                        
+                    </li>
+                    <li>
+                        <p>Tecnologie</p>
+                        
+                    </li>
+                    <li>
+                        <p>Domande frequenti</p>
+                        
+                    </li>       
+                </ul>
+            </nav>
+        </header>
+        <main>
+        <div class=faq >
+               <?php
+                        foreach ($lista_faq as $faq) {
+                    ?>
+                        <h2><?php
+                            echo $faq['domanda'];
+                        ?></h2>
+                        <p><?php
+                            echo $faq['risposta'];
+                        ?></p>
+                    <?php
+                        }
+                ?>
+
+           
+
+        </div>
+    </main>
+        <footer>
+            <div class="footer-content">
+                <div class="list">
+                    <ul>
+                        <li>Google</li>
+                        <li>Tutto su Google</li>
+                        <li>Privacy</li>
+                        <li>Termini</li>
+                    </ul>
+                </div>
+                <div class="language">
+                    <select name="languages">
+                        <option value="">Italiano</option>
+                        <option value="">Inglese</option>
+                        <option value="">Tedesco</option>
+                        <option value="">Francese</option>
+                    </select>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
+
+        
+        
+        
+        
+        
+   
+        
+        
+        
